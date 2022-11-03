@@ -1,0 +1,119 @@
+@media (max-width: 992px) {
+  /*header*/
+
+  body {
+    margin: 0px;
+    padding: 0px;
+
+    overflow-x: hidden;
+  }
+
+  #menu-h {
+    height: 50px;
+    width: 100%;
+
+    border-bottom: transparent;
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .link_menu::after {
+    display: none;
+  }
+
+  #btn {
+    display: flex;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: .5rem;
+    margin: 7px;
+  }
+
+  #menu_ul {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 50px;
+    right: 0px;
+    height: 0px;
+    background: #1a1a1a33;
+    z-index: 1000;
+    transition: .8s;
+    visibility: hidden;
+    overflow-y: hidden;
+    font-size: 25px;
+    list-style: none;
+    text-decoration: none;
+  }
+
+  #menu.active #menu_ul {
+    height: 210px;
+    visibility: visible;
+    overflow-y: auto;
+  }
+
+  #menu_ul .link_menu {
+    text-align: start;
+    padding: 1rem 0;
+    width: auto;
+  }
+
+  #bot {
+    display: block;
+    width: 35 px;
+    height: .5px;
+    border-top: 4px solid #3a3a3a;
+    transition: .5s;
+  }
+
+  #bot::after,
+  #bot::before {
+    content: '';
+    display: block;
+    width: 35px;
+    height: 10px 1;
+    border-top: 4px solid #3a3a3a;
+    margin-top: 5px;
+    transition: .5s;
+    position: relative;
+  }
+
+  #menu.active #bot {
+    border-top-color: transparent;
+  }
+
+  #menu.active #bot::before {
+    transform: rotate(135deg)
+  }
+
+  #menu.active #bot::after {
+    transform: rotate(-135deg);
+    top: -9px;
+  }
+
+  #logo {
+    display: none;
+  }
+
+  #logo_mobile {
+    margin: 6px 12px;
+
+    width: 50px;
+    height: 40px;
+  }
+
+  /*fim header*/
+
+  main {
+    margin: 20px;
+  }
+
+  .menu_active {
+    top: 80px;
+  }
+
+}
